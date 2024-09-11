@@ -1,7 +1,3 @@
-i{
-    position: absolute;
-}
-input{
-    width: 250px;
-    padding: 15px;
+*{
+    font-family: verdana;
 }
