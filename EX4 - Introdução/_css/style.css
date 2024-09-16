@@ -6,9 +6,10 @@
     font-size: 32px;
 }
 button{
-    width: ;
-    height: ;
+    width: 100px;
+    height: 70px;
     border-radius: 15px;
+    font-size: 20px;
 }
 .confirm{
     background-color: green;
@@ -20,6 +21,7 @@ button{
 }
 .clear{
     background-color: yellow;
+    color: black;
 }
 .paragraph{
     color: red;

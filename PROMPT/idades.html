@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Idades</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        var ano = prompt("Digite o ano atual: ")
+        var velha = prompt("Digite o ano de nascimento da pessoa mais velha: ")
+        var nova = prompt("Digite o ano de nascimento da pessoa mais nova: ")
+
+        ano = parseInt(ano)
+        velha = parseInt(velha)
+        nova = parseInt(nova)
+
+        var idade_v = ano - velha
+        var idade_n = ano - nova
+
+        var diferenca = nova - velha
+
+        document.write("<p>O ano atual é: ", ano)
+        document.write("<p>A idade da pessoa mais velha é: ", idade_v + "</p>")
+        document.write("<p>A idade da pessoa mais nova é: ", idade_n + "</p>")
+        document.write("<p>A diferença de idade entre a pessoa mais velha e a pessoa mais nova é de: ", diferenca + "</p>")
+    </script>
+    <style>
+        p{
+            font-weight: bold;
+            font-size: 30px;
+            font-family: verdana;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>

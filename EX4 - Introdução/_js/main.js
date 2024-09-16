@@ -4,13 +4,10 @@ function confirm(){
 function cancel(){
     alert('Cancelado!')
 }
-function clear(){
+function limpar(){
     alert('Limpo!')
 }
 function img(){
     alert('Está é uma imagem referente e linguagem de programação JavaScript.')
-}
-function print(){
-    document.print()   
 }
 document.write("<p class='paragraph'>" + document.title + "</p>")
