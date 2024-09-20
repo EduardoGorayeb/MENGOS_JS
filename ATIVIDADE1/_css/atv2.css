@@ -1,0 +1,21 @@
+*{
+    font-family: verdana;
+}
+h1{
+    text-align: center;
+}
+p{
+    font-size: 20px;
+}
+#aprovado{
+    color: rgb(39, 125, 39);
+    font-weight: bold;
+}
+#recuperacao{
+    color: orange;
+    font-weight: bold;
+}
+#reprovado{
+    color: red;
+    font-weight: bold;
+}

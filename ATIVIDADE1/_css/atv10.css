@@ -1,0 +1,30 @@
+*{
+    font-family: calibri;
+    text-align: center;
+}
+body{
+    background-color: lightyellow;
+    font-size: 24px;
+    font-weight: bold;
+}
+#segunda{
+    color: gray;
+}
+#terca{
+    color: violet;
+}
+#quarta{
+    color: blue;
+}
+#quinta{
+    color: green;
+}
+#sexta{
+    color: brown;
+}
+#sabado{
+    color: red;
+}
+#domingo{
+    color: black;
+}

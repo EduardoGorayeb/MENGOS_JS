@@ -1,0 +1,29 @@
+*{
+    font-family: verdana;
+}
+table, th, td{
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+table{
+    width: 99%;
+    margin: 10px;
+    th, td{
+        padding: 10px;
+        text-align: center;
+        background-color: lightgray;
+    }
+    th{
+        background-color: gray;
+    }
+}
+p{
+    margin: 40px;
+}
+h1{
+    text-align: center;
+}
+#classimc{
+    text-align: center;
+    font-size: 20px;
+}

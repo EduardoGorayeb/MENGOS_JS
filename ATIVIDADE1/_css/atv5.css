@@ -1,0 +1,13 @@
+*{
+    font-family: calibri;
+    text-align: center;
+}
+p{
+    font-size: 32px;
+}
+#operacao{
+    color: blue;
+}
+#resultado{
+    color: red;
+}

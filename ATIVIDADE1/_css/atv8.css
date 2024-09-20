@@ -1,0 +1,12 @@
+*{
+    font-family: verdana;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+p{
+    color: rgb(34, 123, 34);
+}
+#invalido{
+    color: red;
+}

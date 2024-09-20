@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SuperAçaiajin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/superacaiajin.css'>
+    <link rel="shortcut icon" href="_img/logo superacaiajin.ico">
+    <script src='_js/superacaiajin.js'></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Pequeno (P)</th>
+            <td>R$ 10,00</td>
+        </tr>
+        <tr>
+            <th>Médio (M)</th>
+            <td>R$ 15,00</td>
+        </tr>
+        <tr>
+            <th>Grande (G)</th>
+            <td>R$ 20,00</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <form id="form-tamanho">
+        <legend>Escolha um tamanho para o seu açaí</legend>
+        <br>
+        <input type="radio" name="tamanho" value="P" id="P">
+        <label for="P">Tamanho P</label>
+        <input type="radio" name="tamanho" value="M" id="M">
+        <label for="M">Tamanho M</label>
+        <input type="radio" name="tamanho" value="G" id="G">
+        <label for="G">Tamanho G</label>
+        <br><br>
+        <button type="button" onclick="tamanhos()">Calcular</button>
+    </form>
+
+    <p id="resultado"></p>
+    <hr>
+    
+    <form id="form-pagamento">
+        <legend>Escolha uma forma de pagamento</legend>
+        <br>
+        <input type="radio" name="pagamento" value="dinheiro">
+        <label for="dinheiro">Dinheiro</label>
+        <input type="radio" name="pagamento" value="cartao">
+        <label for="cartao">Cartão</label>
+        <br><br>
+        <button type="button" onclick="pagamentos()">Escolher</button>
+    </form>
+
+    <p id="aviso"></p>
+    <p id="pagamento"></p>
+    <p id="valorpagamento"></p>
+
+    <hr>
+
+    <form id="form-troco">
+        <legend>Você irá precisar de troco?</legend>
+        <br>
+        <input type="radio" name="troco" value="sim">
+        <label for="sim">Sim</label>
+        <input type="radio" name="troco" value="nao">
+        <label for="nao">Não</label>
+        <br><br>
+        <button type="button" onclick="valortroco()">Enviar</button>
+    </form>
+
+    <div id="ocultar">
+        <p id="troco"></p>
+        <p id="enviartroco"></p>
+        <p id="quantidadetroco"></p>
+    </div>
+</body>
+</html>
