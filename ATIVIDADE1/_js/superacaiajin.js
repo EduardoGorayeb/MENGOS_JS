@@ -15,14 +15,20 @@ function tamanhos() {
     switch (valorSelecionado) {
         case 'P':
             var resultado = "Você escolheu o tamanho P. Valor: R$ 10";
+            document.getElementById('pagamento').style.display = 'none'
+            document.getElementById('valorpagamento').style.display = 'none'
             escolha = p
             break;
         case 'M':
             var resultado = "Você escolheu o tamanho M. Valor: R$ 15";
+            document.getElementById('pagamento').style.display = 'none'
+            document.getElementById('valorpagamento').style.display = 'none'
             escolha = m
             break;
         case 'G':
             var resultado = "Você escolheu o tamanho G. Valor: R$ 20";
+            document.getElementById('pagamento').style.display = 'none'
+            document.getElementById('valorpagamento').style.display = 'none'
             escolha = g
             break;
         default:
@@ -48,6 +54,8 @@ function pagamentos() {
             document.getElementById('aviso').innerHTML = ""
             valor = "O valor total de seu pedido é: <b>" + escolha + "</b>"
             document.getElementById('form-troco').style.display = 'block'
+            document.getElementById('pagamento').style.display = 'block'
+            document.getElementById('valorpagamento').style.display = 'block'
             break
         case 'cartao':
             var pagamento = "Você escolheu a forma de pagamento Cartão."
@@ -55,6 +63,7 @@ function pagamentos() {
             valor = "O valor total de seu pedido é: <b>" + (escolha + (escolha * 0.05)) + "</b>"
             document.getElementById('form-troco').style.display = 'none'
             document.getElementById('ocultar').style.display = 'none'
+            document.getElementById('valorpagamento').style.display = 'block'
             break
         default:
             var pagamento = "Nenhuma forma de pagamento selecionada."
@@ -98,7 +107,12 @@ function calculartroco() {
     else if (valortroco == escolha) {
         document.getElementById('quantidadetroco').innerHTML = "O valor inserido é suficiente para realizar o pagamento e não precisará de troco."
     }
-    else {
-        document.getElementById('quantidadetroco').innerHTML = "O seu troco é de: <b>R$" + (valortroco - escolha) + "</b>"
+    else if (valortroco > escolha) {
+        var quantidadetroco = valortroco - escolha
+        quantidadetroco = quantidadetroco.toFixed(2)
+        document.getElementById('quantidadetroco').innerHTML = "O seu troco é de: <b>R$" + quantidadetroco + "</b>"
+    }
+    else { 
+        document.getElementById('quantidadetroco').innerHTML = ""
     }
 }
