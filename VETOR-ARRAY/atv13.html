@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Média de 5 números</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <script>
+        var num = [5, 7, 9, 10, 8]
+
+        soma = 0
+        for (i = 0; i < num.length; i++) {
+            soma = soma + num[i]
+        }
+
+        media = soma / num.length
+        media = media.toFixed(2)
+
+        document.write("A média é de: <b>", media, "</b>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

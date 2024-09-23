@@ -58,7 +58,16 @@ input:hover{
 }
 hr{
     border: 1px solid rgb(129, 42, 129);
+    width: 65%;
 }
 legend{
     font-size: 18px;
+}
+#pagarcartao{
+    display: none;
+    margin-left: 18px;
+}
+#realizarpagamento{
+    font-size: 18px;
+    font-weight: bold;
 }

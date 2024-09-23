@@ -1,0 +1,9 @@
+*{
+    font-family: Verdana;
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+}
+p{
+    font-weight: bold;
+}

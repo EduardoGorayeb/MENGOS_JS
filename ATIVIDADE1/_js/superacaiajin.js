@@ -12,23 +12,29 @@ function tamanhos() {
         }
     }
 
+    document.getElementById('pagarcartao').style.display = 'none'
+    document.getElementById('realizarpagamento').style.display = 'none'
+
     switch (valorSelecionado) {
         case 'P':
             var resultado = "Você escolheu o tamanho P. Valor: R$ 10";
             document.getElementById('pagamento').style.display = 'none'
             document.getElementById('valorpagamento').style.display = 'none'
+            document.getElementById('aviso').style.display = 'none'
             escolha = p
             break;
         case 'M':
             var resultado = "Você escolheu o tamanho M. Valor: R$ 15";
             document.getElementById('pagamento').style.display = 'none'
             document.getElementById('valorpagamento').style.display = 'none'
+            document.getElementById('aviso').style.display = 'none'
             escolha = m
             break;
         case 'G':
             var resultado = "Você escolheu o tamanho G. Valor: R$ 20";
             document.getElementById('pagamento').style.display = 'none'
             document.getElementById('valorpagamento').style.display = 'none'
+            document.getElementById('aviso').style.display = 'none'
             escolha = g
             break;
         default:
@@ -56,6 +62,8 @@ function pagamentos() {
             document.getElementById('form-troco').style.display = 'block'
             document.getElementById('pagamento').style.display = 'block'
             document.getElementById('valorpagamento').style.display = 'block'
+            document.getElementById('pagarcartao').style.display = 'none'
+            document.getElementById('realizarpagamento').style.display = 'none'
             break
         case 'cartao':
             var pagamento = "Você escolheu a forma de pagamento Cartão."
@@ -64,6 +72,9 @@ function pagamentos() {
             document.getElementById('form-troco').style.display = 'none'
             document.getElementById('ocultar').style.display = 'none'
             document.getElementById('valorpagamento').style.display = 'block'
+            document.getElementById('aviso').style.display = 'block'
+            document.getElementById('pagarcartao').style.display = 'block'
+            document.getElementById('realizarpagamento').style.display = 'block'
             break
         default:
             var pagamento = "Nenhuma forma de pagamento selecionada."
@@ -72,6 +83,10 @@ function pagamentos() {
 
     document.getElementById('pagamento').innerHTML = pagamento;
     document.getElementById('valorpagamento').innerHTML = valor;
+}
+
+function realizarpagamento() {
+    document.getElementById('realizarpagamento').innerHTML = "Pagamento realizado com sucesso. Obrigado e volte sempre!"
 }
 
 function valortroco() {
@@ -86,6 +101,7 @@ function valortroco() {
             case 'sim':
                 document.getElementById('troco').innerHTML = "<input type='number' id='valortroco' placeholder='Insira o valor do pagamento aqui' onchange='calculartroco()'>"
                 document.getElementById('quantidadetroco').style.display = 'block'
+                document.getElementById('ocultar').style.display = 'block'
                 break
             case 'nao':
                 document.getElementById('troco').innerHTML = "O total de seu pedido foi: <b>R$" + escolha + "</b>"

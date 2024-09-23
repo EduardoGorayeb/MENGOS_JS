@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Alunos por índice</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <script>
+        var alunos = ['Eduardo Meneghetti', 'Matheus Mariano', 'Arthur Mambelli', 'Leonardo Fernandes', 'Pedro Moraes', 'Matheus Fernandes', 'Higor Alargon']
+
+        var num = parseInt(prompt("Insira um número para procurar um aluno pelo índice: "))
+
+        if (num >= 0 && num < alunos.length) {
+            document.write("O aluno com índice correspondente é: <b>", alunos[num], "</b>")
+        }
+        else {
+            document.write("Não foi possível encontrar um aluno com índice correspondente.")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
