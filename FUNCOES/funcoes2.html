@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hello, I'm JavaScript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <script>
+        function showMessage() {
+            let message = "Hello, I'm JavaScript!";
+
+            alert(message);
+        }
+        showMessage() // Vai funcionar, pois está chamando a função, ou seja, o que será executado está dentro da função
+
+        alert(message) // Não vai funcionar, pois está tentando chamar uma variável de dentro da função, globalmente ela não existe
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

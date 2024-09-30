@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Operações Matemáticas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <link rel="shortcut icon" href="_img/favicon.ico">
+    <script>
+        function operacoes() {
+            var num1 = parseInt(document.getElementById('num1').value)
+            var num2 = parseInt(document.getElementById('num2').value)
+
+            var operacoes = []
+            var operacao1 = num1 + num2
+            var operacao2 = num1 - num2
+            var operacao3 = num1 * num2
+            var operacao4 = num1 / num2
+            var operacao5 = operacao1 * 0.252
+            var operacao6 = operacao1 / 2
+            var operacao7 = operacao1 ** 2
+            var operacao8 = operacao1 ** 0.5
+
+            operacoes.push(operacao1, operacao2, operacao3, operacao4, operacao5, operacao6, operacao7, operacao8)
+
+            for (i = 0; i < operacoes.length; i++) {
+                document.write("<p>Operação " + (i+1) + " = " + operacoes[i] + "</p>")
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="num1">Insira o primeiro número para realizar a operação: </label>
+    <input type="number" id="num1" placeholder="Primeiro número"><br><br>
+    <label for="num2">Insira o segundo número para realizar a operação: </label>
+    <input type="number" id="num2" placeholder="Segundo número"><br><br>
+    <button onclick="operacoes()">Clique aqui para realizar as operações</button>
+</body>
+</html>

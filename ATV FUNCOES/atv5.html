@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cálculo de Bhaskara</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <link rel="shortcut icon" href="_img/favicon.ico">
+    <script>
+        function calcular() {
+            var a = parseFloat(document.getElementById('coeficienteA').value)
+            var b = parseFloat(document.getElementById('coeficienteB').value)
+            var c = parseFloat(document.getElementById('coeficienteC').value)
+            var delta = (b**2) - (4*a*c)
+            var raiz_delta = delta ** 0.5
+            var x1 = ((-b) + raiz_delta) / (2*a)
+            var x2 = ((-b) - raiz_delta) / (2*a)
+
+            if (delta >= 0) {
+                document.getElementById('x1').innerHTML = "<p><b>O valor de X1 é: </b>" + x1 + "</p>"
+                document.getElementById('x2').innerHTML = "<p><b>O valor de X2 é: </b>" + x2 + "</p>"
+            }
+            else {
+                document.getElementById('mensagem').innerHTML = "<p>Você inseriu algum valor inválido, verifique e tente novamente!"
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Bem-vindo(a) à calculadora de Bhaskara!</h1>
+    <label for="coeficienteA">Insira o número que corresponde ao coeficiente 'a': </label>
+    <input type="number" id="coeficienteA" placeholder="Primeiro número"><br><br>
+    <label for="coeficienteB">Insira o número que corresponde ao coeficiente 'b': </label>
+    <input type="number" id="coeficienteB" placeholder="Segundo número"><br><br>
+    <label for="coeficienteC">Insira o número que corresponde ao coeficiente 'c': </label>
+    <input type="number" id="coeficienteC" placeholder="Terceiro número"><br><br>
+    <button onclick="calcular()">Clique aqui para realizar o cálculo</button>
+
+    <p id="x1"></p>
+    <p id="x2"></p>
+    <p id="mensagem"></p>
+</body>
+</html>

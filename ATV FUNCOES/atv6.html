@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Nome e Horário</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <link rel="shortcut icon" href="_img/favicon.ico">
+    <script>
+        function escrever() {
+            var hora = parseFloat(document.getElementById('hora').value)
+            var hora = hora.toFixed(2)
+            var nome = document.getElementById('nome').value
+
+            if (hora >= 6 && hora <= 12.99) {
+                document.getElementById('mensagem').innerHTML = "Bom Dia <b>" + nome + "</b>, agora são: <b>" + hora + "h</b>"
+            }
+            else if (hora >= 13 && hora <= 17.99) [
+                document.getElementById('mensagem').innerHTML = "Boa Tarde <b>" + nome + "</b>, agora são: <b>" + hora + "h</b>"
+            ]
+            else if (hora >= 18 && hora <= 23.99) {
+                document.getElementById('mensagem').innerHTML = "Boa Noite <b>" + nome + "</b>, agora são: <b>" + hora + "h</b>"
+            }
+            else if (hora >= 0 && hora <= 5.99) {
+                document.getElementById('mensagem').innerHTML = "É melhor você ir dormir, Durma Bem <b>" + nome + "</b>, agora são: <b>" + hora + "h</b>"
+            }
+            else {
+                document.getElementById('mensagem').innerHTML = "Insira um horário válido e tente novamente."
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="hora">Insira o horário atual (<b>use '.' ao invés de ':' EX: 14.30 (14:30)</b>): </label>
+    <input type="number" id="hora" placeholder="Hora"><br><br>
+    <label for="nome">Insira o seu nome: </label>
+    <input type="text" id="nome" placeholder="Nome"><br><br>
+
+    <button onclick="escrever()">Clique aqui</button>
+
+    <p id="mensagem"></p>
+</body>
+</html>

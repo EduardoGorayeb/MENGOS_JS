@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Array de 5 números</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <link rel="shortcut icon" href="_img/favicon.ico">
+    <script>
+        function escrever() {
+            var num1 = document.getElementById('num1').value
+            var num2 = document.getElementById('num2').value
+            var num3 = document.getElementById('num3').value
+            var num4 = document.getElementById('num4').value
+            var num5 = document.getElementById('num5').value
+            var numeros = [num1, num2, num3, num4, num5]
+            var numeros = numeros.sort()
+
+            for (i = 0; i < numeros.length; i++) {
+                document.write("<p><b>" + (i+1) + ". </b>" + numeros[i] + "</p>")
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="num1">Insira um número: </label>
+    <input type="number" id="num1" placeholder="Primeiro número"><br><br>
+    <label for="num2">Insira outro número: </label>
+    <input type="number" id="num2" placeholder="Segundo número"><br><br>
+    <label for="num3">Insira outro número: </label>
+    <input type="number" id="num3" placeholder="Terceiro número"><br><br>
+    <label for="num4">Insira outro número: </label>
+    <input type="number" id="num4" placeholder="Quarto número"><br><br>
+    <label for="num5">Insira outro número: </label>
+    <input type="number" id="num5" placeholder="Quinto número"><br><br>
+    <button onclick="escrever()">Clique aqui</button>
+</body>
+</html>

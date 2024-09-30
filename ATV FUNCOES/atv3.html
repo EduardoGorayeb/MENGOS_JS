@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Conversão de temperatura</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/graus.css'>
+    <link rel="shortcut icon" href="_img/favicon.ico">
+    <script>
+        function celsius() {
+            document.getElementById('grausF').style.display = 'none'
+            document.getElementById('grausF1').style.display = 'none'
+            document.getElementById('grausC').style.display = 'block'
+            document.getElementById('grausC1').style.display = 'block'
+            document.getElementById('temperatura').style.display = 'none'
+        }
+
+        function conversaoC() {
+            var celsius = document.getElementById('grausC').value
+
+            var farenheit = parseFloat((celsius * 1.8) + 32)
+            document.getElementById('temperatura').style.display = 'block'
+            document.getElementById('temperatura').innerHTML = "A temperatura convertida é de: " + farenheit
+        }
+
+        function farenheit() {
+            document.getElementById('grausF1').style.display = 'block'
+            document.getElementById('grausF').style.display = 'block'
+            document.getElementById('grausC').style.display = 'none'
+            document.getElementById('grausC1').style.display = 'none'
+            document.getElementById('temperatura').style.display = 'none'
+        }
+
+        function conversaoF() {
+            var farenheit = document.getElementById('grausF').value
+
+            var celsius = parseFloat((farenheit - 32) * 5/9)
+            var celsius = celsius.toFixed(4)
+            document.getElementById('temperatura').style.display = 'block'
+            document.getElementById('temperatura').innerHTML = "A temperatura convertida é de: " + celsius
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="celsius()">Conversão de graus Celsius para Farenheit</button>
+    <button onclick="farenheit()">Conversão de graus Farenheit para Celsius</button>
+
+    <label for="grausC" id="grausC1">Insira a temperatura em graus Celsius</label>
+    <input type="number" id="grausC" onchange="conversaoC()" placeholder="Temperatura">
+
+    <label for="grausF" id="grausF1">Insira a temperatura em graus Farenheit</label>
+    <input type="number" id="grausF" onchange="conversaoF()" placeholder="Temperatura">
+
+    <p id="temperatura"></p>
+</body>
+
+</html>

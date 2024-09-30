@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Categorias da Carteira de Habilitação</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <link rel="shortcut icon" href="_img/favicon.ico">
+    <script>
+        function escrever() {
+            var categoria = String(document.getElementById('categoria').value)
+            var categoria = categoria.toUpperCase()
+            
+            var nome = document.getElementById('nome').value
+
+            if (categoria == "A") {
+                document.getElementById('mensagem').innerHTML = "<p>" + nome + ", você pode dirigir motos e triciclos.</p>"
+            }
+            else if (categoria == "B") {
+                document.getElementById('mensagem').innerHTML = "<p>" + nome + ", você pode dirigir carros de passeio.</p>"
+            }
+            else if (categoria == "C") {
+                document.getElementById('mensagem').innerHTML = "<p>" + nome + ", você pode dirigir veículos de carga que contenham mais de 3.5 toneladas.</p>"
+            }
+            else if (categoria == "D") {
+                document.getElementById('mensagem').innerHTML = "<p>" + nome + ", você pode dirigir veículos com mais de 8 (oito) passageiros.</p>"
+            }
+            else if (categoria == "E") {
+                document.getElementById('mensagem').innerHTML = "<p>" + nome + ", você pode dirigir veículos que contenham uma unidade acoplada de mais de 6 toneladas.</p>"
+            }
+            else {
+                document.getElementById('mensagem').innerHTML = "<p>Você não inseriu uma categoria válida, tente novamente!</p>"
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="categoria">Insira a categoria de sua habilitação (letra): </label>
+    <input type="text" id="categoria" placeholder="Categoria da carteira"><br><br>
+    <label for="nome">Insira o seu nome: </label>
+    <input type="text" id="nome" placeholder="Nome"><br><br>
+
+    <button onclick="escrever()">Clique aqui</button>
+
+    <p id="mensagem"></p>
+</body>
+</html>
