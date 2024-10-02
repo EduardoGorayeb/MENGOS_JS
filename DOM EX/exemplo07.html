@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DOM 07</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <script>
+        /* Aqui, criamos uma função para quando a pessoa clicar no botão, o conteúdo, cor e fonte do parágrafo serem alterados.
+        Para alterar o conteúdo, utilizamos 'textContent', para alterar a cor, '.style.color' e a fonte com '.style.fontFamily'
+        Fazemos essas alterações no elemento 'ps[i]', utilizamos 'i' dentro do colchetes para especificar o índice do parágrafo que vamos fazer alterações
+        */
+
+        function mudarTexto() {
+            var ps = document.querySelectorAll(".meuParagrafo")
+
+            for (var i = 0; i < ps.length; i++) {
+                ps[i].textContent = "Novo conteúdo do parágrafo " + (i + 1) + "!";
+                ps[i].style.color = "red";
+                ps[i].style.fontFamily = "Arial";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p class="meuParagrafo">Este é o meu parágrafo 1.</p>
+    <p class="meuParagrafo">Este é o meu parágrafo 2.</p>
+    <button id="meuBotao" onclick="mudarTexto()">Clique aqui!</button>
+</body>
+</html>

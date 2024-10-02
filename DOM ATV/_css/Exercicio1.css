@@ -1,0 +1,37 @@
+*{
+    font-family: arial;
+    font-size: 24px;
+    margin: 8px;
+    padding: 5px;
+}
+p{
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px white;
+}
+body{
+    background-color: lightblue;
+    text-align: center;
+}
+button{
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    opacity: 70%;
+    transition: all 0.3s;
+    width: 700px;
+}
+input{
+    border-radius: 5px;
+    padding: 8px;
+    opacity: 70%;
+    transition: all 0.3s;
+    width: 680px;
+}
+input:hover{
+    transform: scale(1.05);
+    opacity: 85%;
+}
+button:hover{
+    transform: scale(1.05);
+    opacity: 85%;
+}

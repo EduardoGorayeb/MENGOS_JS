@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DOM 01</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <script>
+        // Uma função que será executada quando o usuário clicar no botão com o objetivo de alterar o conteúdo do parágrafo de id="meuParagrafo" utilizando ".textContent" que substitui o texto do parágrafo para um texto já definido em "p.textContent = "Novo conteúdo do párágrafo!
+        function mudarTexto() {
+            var p = document.getElementById('meuParagrafo');
+
+            p.textContent = "Novo conteúdo do parágrafo!"
+        }
+    </script>
+</head>
+<body>
+    <p id="meuParagrafo">Este é o meu parágrafo.</p>
+    <button id="meuBotao" onclick="mudarTexto()">Clique aqui!</button>
+</body>
+</html>

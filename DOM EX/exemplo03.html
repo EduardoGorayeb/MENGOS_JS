@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DOM 03</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <script>
+        // Uma função que é executada ao clicar no botão, ela mudará o conteúdo dos parágrafos que contém a class="meuParagrafo", ao ter mais de 1 elemento com a mesma classe, para chamá-los utilizamos o índice, que começa em 0 e termina 1 número a menos do que o comprimento, ou seja, se tivermos 5 itens, o índice irá de 0 até 4, pois na contagem do comprimento começamos em 1, mas no índice começamos em 0.
+        
+        // Ao armazenarmos o conteúdo dos parágrafos em "ps", podemos editá-lo ao colocar o índice correto, por isso utilizamos um "for" para percorrer todo o conteúdo da classe e mudar o conteúdo específico que contém o índice especificado, ou seja, se o i começa em 0, o primeiro item que vamos mudar é o primeiro, pois ele contém o índice 0, quando aumentarmos o valor de i para 1 ao invés de 0, podemos mudar o segundo elemento, pois ele tem índice 1.
+
+        function mudarTexto() {
+            var ps = document.getElementsByClassName("meuParagrafo");
+
+            for (i = 0; i < ps.length; i++) {
+                ps[i].textContent = "Novo conteúdo do parágrafo " + (i + 1) + "!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p class="meuParagrafo">Este é o meu parágrafo 1.</p>
+    <p class="meuParagrafo">Este é o meu parágrafo 2.</p>
+
+    <button id="meuBotao" onclick="mudarTexto()">Clique Aqui</button>
+</body>
+</html>

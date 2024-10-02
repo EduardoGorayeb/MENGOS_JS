@@ -1,0 +1,23 @@
+*{
+    font-family: verdana;
+}
+p{
+    font-size: 20px;
+}
+button{
+    font-size: 20px;
+}
+body{
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+}
+.dark-mode{
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+.light-mode{
+    background-color: white;
+    color: black;
+}

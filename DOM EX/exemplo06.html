@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DOM 06</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <style>
+        .minhaClasse {
+            color: blue;
+        }
+    </style>
+    <script>
+
+        var cores = ["red", "green", "yellow", "pink", "gray", "blue"];
+        var indiceCor = 0;
+
+        function mudarCor() {
+            var p = document.querySelector(".minhaClasse")
+
+            p.style.color = cores[indiceCor];
+
+            indiceCor = (indiceCor + 1) % cores.length
+        }
+    </script>
+</head>
+<body>
+    <p class="minhaClasse">Este é o meu parágrafo.</p>
+    <button id="meuBotao" onclick="mudarCor()">Clique aqui para mudar a cor do parágrafo</button>
+</body>
+</html>

@@ -1,0 +1,30 @@
+*{
+    font-family: Verdana;
+}
+body{
+    width: 3000px;
+    height: 3000px;
+    background-color: rgb(212, 236, 243);
+}
+div{
+    position: fixed;
+    margin-top: 279.5px;
+    margin-left: 628.75px;
+    text-align: center;
+    background-color: #add8e6;
+    padding: 50px;
+    border-radius: 5px;
+}
+button{
+    background-color: #3498db;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+button:hover{
+    cursor: pointer;
+    opacity: 85%;
+}

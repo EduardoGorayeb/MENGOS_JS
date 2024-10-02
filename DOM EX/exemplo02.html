@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DOM 02</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <script>
+        // Uma função que é executada após o usuário clicar no botão, ela substitui o conteúdo do parágrafo em HTML para o que o usuário digitar dentro do input, isso é possível pois o que o usuário escreve dentro do input fica armazenado em "value", e ao chamarmos o value em "input.value", conseguimos puxar o que o usuário digitou
+        function mostrarValor() {
+            var input = document.getElementsByName("meuInput")[0];
+            var resultado = document.getElementById("resultado");
+
+            resultado.textContent = "Valor do input: " + input.value;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="meuInput" placeholder="Digite algo aqui">
+    <button id="meuBotao" onclick="mostrarValor()">Mostrar Valor</button>
+    <p id="resultado"></p>
+</body>
+</html>
