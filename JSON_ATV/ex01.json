@@ -1,0 +1,26 @@
+{
+    "usuarios":
+    [
+        {
+            "nome": "José Silva",
+            "idade": 27,
+            "endereco": "Rua Voorhees",
+            "cidade": "Mirassol",
+            "filhos": ["Joana", "João"] 
+        },
+        {
+            "nome": "Antônio Prado",
+            "idade": 50,
+            "endereco": "Rua Friday",
+            "cidade": "Tanabi",
+            "filhos": ["Mauricio"] 
+        },
+        {
+            "nome": "Geisa Pereira",
+            "idade": 30,
+            "endereco": "Rua LastDrem",
+            "cidade": "São Paulo",
+            "filhos": ["Thiago"]
+        }
+    ]
+}

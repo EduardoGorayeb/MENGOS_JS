@@ -1,0 +1,53 @@
+*{
+    font-family: cursive;
+}
+body{
+    background-color: rgb(212, 236, 243);
+}
+h1{
+    text-align: center;
+}
+div{
+    text-align: center;
+    background-color: #add8e6;
+    padding: 50px;
+    border-radius: 5px;
+    width: 94vw;
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    background-color: #3498db;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: all 0.3s;
+}
+button:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+#elefante, #girafa, #hipo{
+    display: none;
+    width: 350px;
+    height: 226px;
+}
+img{
+    display: flex;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    border-radius: 7px;
+}
+img:hover{
+    transform: scale(1.06);
+}
+#ocultar{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    display: none;
+}

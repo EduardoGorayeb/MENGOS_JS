@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Imagens Ocultas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/Exercicio02.css'>
+    <link rel="shortcut icon" href="_img/favicon.ico">
+    <script src='_js/Exercicio02.js'></script>
+</head>
+<body>
+    <h1>Clique em um dos botões para mostrar um animal.</h1>
+    <div>
+        <figure>
+            <img src="_img/elefante.png" alt="Imagem de um elefante" id="elefante">
+            <br>
+            <figcaption>
+                <button onclick="mostrarG()" id="botaoelefante">Clique aqui para mostrar um Elefante</button>
+            </figcaption>
+            <br>
+        </figure>
+
+        <figure>
+            <img src="_img/girafa.png" alt="Imagem de uma girafa" id="girafa">
+            <br>
+            <figcaption>
+                <button onclick="mostrarC()" id="botaogirafa">Clique aqui para mostrar uma Girafa</button>
+            </figcaption>
+            <br>
+        </figure>
+
+        <figure>
+            <img src="_img/hipopotamo.png" alt="Imagem de um hipopótamo" id="hipo">
+            <br>
+            <figcaption>
+                <button onclick="mostrarP()" id="botaohipopotamo">Clique aqui para mostrar um Hipopótamo</button>
+            </figcaption>
+            <br>
+        </figure>
+    </div>
+
+    <br>
+    <button id="ocultar" onclick="ocultar()">Clique aqui para ocultar as imagens.</button>
+</body>
+</html>

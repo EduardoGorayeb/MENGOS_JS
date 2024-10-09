@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exemplo de JSON 02</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/exemplo01.css'>
+</head>
+<body>
+    <div>
+        <form id="meuFormulario">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui">
+            <label for="idade">Idade:</label>
+            <input type="number" name="idade" id="idade" placeholder="Insira sua idade aqui">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <script>
+        // Selecione o formulário
+        let formulario = document.querySelector('#meuFormulario');
+
+        // Adiciona um evendo de envio ao formulário
+
+        formulario.addEventListener("submit", function(event) {
+            // Impede o comportamento padrão do formulário (enviar os dados para o servidor
+            event.preventDefault();
+
+            // Cria um objeto para armazenar os dados do formulário
+            let dados = {};
+
+            // Adiciona os valores dos campos do formulário ao objeto
+            dados.nome = document.querySelector('#nome').value;
+            dados.idade = document.querySelector('#idade').value;
+
+            // Converte o objeto em uma string JSON
+            let dadosJSON = JSON.stringify(dados);
+
+            // Exibe a string JSON na tela (apenas para fins de demonstração)
+            alert(dadosJSON);
+        })
+    </script>
+</body>
+</html>

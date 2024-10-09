@@ -1,0 +1,67 @@
+*{
+    font-family: Verdana;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+#imagem-fundo{
+    background-image: url(../_img/foto\ funcionario.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    opacity: 6%;
+    z-index: 1;
+}
+form{
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 10px;
+    gap: 16px;
+    box-sizing: border-box;
+    width: 30%;
+    overflow: hidden;
+    z-index: 2;
+    h1{
+        color: rgb(125, 255, 0);
+        text-align: center;
+    }
+    input{
+        outline: none;
+        border-radius: 10px;
+        border: 1px solid #181818;
+        color: white;
+        padding: 6.5px;
+        background-color: #181818;
+    }
+    input:focus{
+        border: 2px solid rgb(125, 255, 0);
+    }
+    input[type="submit"]{
+        padding: 10px;
+        background-color: rgb(125, 255, 0);
+        font-weight: bold;
+        transition: all 0.5s;
+        cursor: pointer;
+        color: black;
+    }
+    input[type="submit"]:hover{
+        background-color: rgb(94, 195, 0);
+    }
+}
+span{
+    display: none;
+    color: #e63636;
+    font-size: 12px;
+    margin-top: -14px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>.onmouseover / .onmouseout</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <link rel="shortcut icon" href="_img/favicon.ico">
+</head>
+<body>
+    <p id="myP">Passe o mouse sobre este parágrafo.</p>
+
+    <p id="output"></p>
+
+    <script>
+        let myP = document.getElementById("myP");
+        let output = document.getElementById("output")
+
+        myP.onmouseover = function() {
+            output.innerHTML = "<b>Você passou o mouse sobre o parágrafo!</b>"
+        }
+        myP.onmouseout = function() {
+            output.innerHTML = "";
+        }
+    </script>
+</body>
+</html>

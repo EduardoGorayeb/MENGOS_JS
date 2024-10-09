@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cadastro de Filmes/Séries</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/exercicio03.css'>
+    <link rel="shortcut icon" href="_img/favicon.ico">
+    <script src='_js/exercicio03.js'></script>
+</head>
+<body>
+    <div id="imagem-fundo"></div>
+
+    <form action="validacao03.html" method="get">
+        <h1>Cadastro de Filmes/Séries</h1>
+
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" placeholder="Digite o código do filme/série aqui" minlength="1" oninput="inputCodigo()" required>
+        <span id="avisoCodigo">Digite um código válido.</span>
+    
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" placeholder="Digite o título aqui" minlength="1" oninput="inputTitulo()" required>
+        <span id="avisoTitulo">Você precisa digitar algo aqui.</span>
+
+        <label for="produtor">Produtor:</label>
+        <input type="text" id="produtor" placeholder="Digite o nome do produtor aqui" minlength="1" oninput="inputProdutor()" required>
+        <span id="avisoProdutor">Você precisa digitar algo aqui.</span>
+
+        <label for="ano">Ano de Lançamento:</label>
+        <input type="text" id="ano" placeholder="Digite o ano de lançamento aqui" maxlength="4" minlength="4" pattern="\d+" title="Por favor, insira apenas números." oninput="inputAno()" required>
+        <span id="avisoAno">Você precisa inserir os 4 dígitos que formam um ano.</span>
+
+        <label for="tipo">Tipo:</label>
+        <select id="tipo" required onchange="inputTipo()">
+            <option name="tipo" value="inicio">Clique aqui para selecionar um tipo</option>
+            <option name="tipo" value="acao">Ação</option>
+            <option name="tipo" value="aventura">Aventura</option>
+            <option name="tipo" value="comedia">Comédia</option>
+            <option name="tipo" value="drama">Drama</option>
+            <option name="tipo" value="terror">Terror</option>
+            <option name="tipo" value="ficcao">Ficção Científica</option>
+            <option name="tipo" value="fantasia">Fantasia</option>
+            <option name="tipo" value="suspense">Suspense</option>
+            <option name="tipo" value="romance">Romance</option>
+            <option name="tipo" value="animacao">Animação</option>
+            <option name="tipo" value="documentario">Documentário</option>
+            <option name="tipo" value="musical">Musical</option>
+            <option name="tipo" value="guerra">Guerra</option>
+            <option name="tipo" value="faroeste">Faroeste</option>
+            <option name="tipo" value="misterio">Mistério</option>
+            <option name="tipo" value="policial">Policial</option>
+            <option name="tipo" value="esporte">Esporte</option>
+            <option name="tipo" value="historico">Histórico</option>
+            <option name="tipo" value="biografico">Biográfico</option>
+        </select>
+        <span id="avisoTipo">Você deve selecionar algum tipo.</span>
+
+        <label for="classificacao">Classificação:</label>
+        <select id="classificacao" required onchange="inputClassificacao()">
+            <option value="inicio">Clique aqui para selecionar uma classificação</option>
+            <option value="livre">L (Livre)</option>
+            <option value="10">10 anos</option>
+            <option value="12">12 anos</option>
+            <option value="14">14 anos</option>
+            <option value="16">16 anos</option>
+            <option value="18">18 anos</option>
+        </select>
+        <span id="avisoClassificacao">Você deve selecionar alguma classificação.</span>
+
+        <label for="duracao">Duração (em MINUTOS):</label>
+        <input type="text" id="duracao" placeholder="Digite a duração em minutos aqui" pattern="\d+" title="Por favor, insira apenas números." maxlength="3" required oninput="inputDuracao()">
+        <span id="avisoDuracao">Você precisa digitar algo aqui.</span>
+
+        <label for="comentario">Comentário:</label>
+        <textarea name="comentario" id="comentario" placeholder="Faça um breve comentário sobre o filme/série..." minlength="25" oninput="inputComentario()"></textarea>
+        <span id="avisoComentario">Você deve inserir no mínimo 25 caracteres para enviar o comentário.</span>
+
+        <input type="submit" value="Enviar"></input>
+    </form>
+</body>
+</html>

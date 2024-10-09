@@ -8,8 +8,7 @@ body{
 }
 div{
     position: fixed;
-    margin-top: 279.5px;
-    margin-left: 628.75px;
+    margin: auto;
     text-align: center;
     background-color: #add8e6;
     padding: 50px;

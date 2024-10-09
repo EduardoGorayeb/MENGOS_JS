@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cadastro de Usuários/Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/exercicio04.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="_img/favicon.ico">
+    <script src='_js/exercicio04.js'></script>
+</head>
+<body>
+    <form action="validacao04.html" method="get">
+        <h1>Cadastro de Usuários/Login</h1>
+
+        <label for="usuario">Usuário:</label>
+        <input type="text" id="usuario" placeholder="Digite seu nome de usuário aqui" minlength="3" oninput="inputUsuario()" required>
+        <span id="avisoUsuario">O nome de usuário precisa ter no mínimo 3 caracteres.</span>
+        
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Digite seu nome aqui" minlength="3" oninput="inputNome()" required>
+        <span id="avisoNome">O nome precisa ter no mínimo 3 caracteres.</span>
+
+        <label for="tipoConta">Tipo de Conta:</label>
+        <select name="tipo" id="tipo" onchange="inputTipo()">
+            <option value="inicio">Clique aqui para selecionar o tipo</option>
+            <option value="pessoal">Conta pessoal</option>
+            <option value="corporativa">Conta corporativa</option>
+            <option value="educacional">Conta educacional</option>
+        </select>
+        <span id="avisoTipo">Selecione o tipo de conta.</span>
+
+        <label for="grupo">Grupo:</label>
+        <select name="grupo" id="grupo" onchange="inputGrupo()">
+            <option value="inicio">Clique aqui para selecionar o grupo</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="marketing">Marketing</option>
+            <option value="ti">Técnico de Informática</option>
+            <option value="financeiro">Financeiro</option>
+        </select>
+        <span id="avisoGrupo">Selecione o grupo relacionado a conta.</span>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail aqui" oninput="inputEmail()" required>
+        <span id="avisoEmail">Digite um e-mail válido.</span>
+
+        <label for="senha">Senha:</label>
+        <div id="divSenha">
+            <input type="password" id="senha" placeholder="Digite sua senha aqui" oninput="inputSenha()" required><i id="icone" class="bi bi-eye" onclick="mostrarSenha()"></i>
+        </div>
+        <span id="avisoSenha"></span>
+
+        <label for="senha2">Confirme sua senha:</label>
+        <div id="divSenha">
+            <input type="password" id="senha2" placeholder="Confirme sua senha" oninput="confirmaSenha()" required><i id="icone2" class="bi bi-eye" onclick="mostrarSenha2()"></i>
+        </div>
+        <span id="avisoSenha2">As senhas não coincidem.</span>
+
+        <input type="submit" value="Enviar"></input>
+    </form>
+</body>
+</html>

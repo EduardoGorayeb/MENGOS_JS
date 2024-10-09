@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>addEventListener</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/style.css'>
+    <link rel="shortcut icon" href="_img/favicon.ico">
+</head>
+<body>
+    <button id="try">Clique aqui!</button>
+
+    <h1 id="text"></h1>
+
+    <script>
+        document.getElementById("try").addEventListener("click", function(){
+            document.getElementById("text").innerText = "Parabéns";
+            alert("Parabéns!")
+        });
+    </script>
+</body>
+</html>

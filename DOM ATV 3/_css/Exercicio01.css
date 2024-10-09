@@ -1,0 +1,32 @@
+*{
+    font-family: Verdana;
+}
+body{
+    background-color: rgb(212, 236, 243);
+}
+div{
+    position: fixed;
+    text-align: center;
+    background-color: #add8e6;
+    padding: 50px;
+    border-radius: 5px;
+    margin-left: 470px;
+    margin-top: 360px;
+}
+button{
+    background-color: #3498db;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+button:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+#P{
+    color: black;
+}

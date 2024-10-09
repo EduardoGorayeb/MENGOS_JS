@@ -1,0 +1,29 @@
+*{
+    font-family: Verdana;
+}
+body{
+    background-color: lightblue;
+}
+p{
+    font-size: 24px;
+}
+form{
+    font-size: 24px;
+}
+input{
+    font-size: 24px;
+}
+#botao{
+    background-color: #3498db;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+#botao:hover{
+    cursor: pointer;
+    opacity: 80%;
+}

@@ -1,0 +1,27 @@
+*{
+    font-family: Verdana;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #1e1e1e;
+    padding: 8rem;
+    gap: 16px;
+    border-radius: 10px;
+    h1{
+        color: rgb(125, 255, 0);
+    }
+    p{
+        color: white;
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Zoom</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/mousebox.css'>
+    <link rel="shortcut icon" href="_img/favicon.ico">
+    <style>
+        .image-container {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-container img{
+            transition: 0.3s ease-in-out;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="http://cm1.narvii.com/7220/93f9aacf2cb432ed309b93ba677313df0db9a365_00.jpg" alt="Imagem" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+    </div>
+</body>
+</html>
