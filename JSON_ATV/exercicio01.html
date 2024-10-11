@@ -4,22 +4,62 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Dados do Arquivo</title>
+    <title>Dados dos Usuários</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='_css/exercicio01.css'>
 
 </head>
 
 <body>
-    <button onclick="getData()">Clique aqui.</button>
-    <pre id="preUsuarios"></pre>
+    <div id="container">
+        <div id="buttons">
+            <button onclick="getDataUsuario1()">Dados do Usuário 1</button>
+            <button onclick="getDataUsuario2()">Dados do Usuário 2</button>
+            <button onclick="getDataUsuario3()">Dados do Usuário 3</button>
+        </div>
+        <pre id="preUsuarios"></pre>
+    </div>
 
     <script>
-        function getData() {
-            fetch('ex01.json')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('preUsuarios').textContent = JSON.stringify(data, null, 2);
+        function getDataUsuario1() {
+            fetch('ex01.json') // Tag utilizada para entrar dentro de nosso arquivo .json, o nome do arquivo vai dentro do parênteses que segue a tag e fica entre aspas
+                .then(conteudo => conteudo.json()) // Convertendo os dados JSON no primeiro .then
+                .then(resultado => { // No segundo .then, nós criamos uma variável que irá armazenas os dados convertidos
+                    var nome = "<b>Nome: </b>" + resultado.usuarios[0].nome
+                    var idade = "<b>Idade: </b>" + resultado.usuarios[0].idade
+                    var endereco = "<b>Endereço: </b>" + resultado.usuarios[0].endereco
+                    var cidade = "<b>Cidade: </b>" + resultado.usuarios[0].cidade
+                    var filhos = "<b>Filhos: </b>" + resultado.usuarios[0].filhos.join(", ")
+
+                    document.getElementById('preUsuarios').innerHTML = nome + "\n\n" + idade + "\n\n" + endereco + "\n\n" + cidade + "\n\n" + filhos
+                })
+        }
+
+        function getDataUsuario2() {
+            fetch('ex01.json') // Tag utilizada para entrar dentro de nosso arquivo .json, o nome do arquivo vai dentro do parênteses que segue a tag e fica entre aspas
+                .then(conteudo => conteudo.json()) // Convertendo os dados JSON no primeiro .then
+                .then(resultado => { // No segundo .then, nós criamos uma variável que irá armazenas os dados convertidos
+                    var nome = "<b>Nome: </b>" + resultado.usuarios[1].nome
+                    var idade = "<b>Idade: </b>" + resultado.usuarios[1].idade
+                    var endereco = "<b>Endereço: </b>" + resultado.usuarios[1].endereco
+                    var cidade = "<b>Cidade: </b>" + resultado.usuarios[1].cidade
+                    var filhos = "<b>Filhos: </b>" + resultado.usuarios[1].filhos
+
+                    document.getElementById('preUsuarios').innerHTML = nome + "\n\n" + idade + "\n\n" + endereco + "\n\n" + cidade + "\n\n" + filhos
+                })
+        }
+
+        function getDataUsuario3() {
+            fetch('ex01.json') // Tag utilizada para entrar dentro de nosso arquivo .json, o nome do arquivo vai dentro do parênteses que segue a tag e fica entre aspas
+                .then(conteudo => conteudo.json()) // Convertendo os dados JSON no primeiro .then
+                .then(resultado => { // No segundo .then, nós criamos uma variável que irá armazenas os dados convertidos
+                    var nome = "<b>Nome: </b>" + resultado.usuarios[2].nome
+                    var idade = "<b>Idade: </b>" + resultado.usuarios[2].idade
+                    var endereco = "<b>Endereço: </b>" + resultado.usuarios[2].endereco
+                    var cidade = "<b>Cidade: </b>" + resultado.usuarios[2].cidade
+                    var filhos = "<b>Filhos: </b>" + resultado.usuarios[2].filhos
+
+                    document.getElementById('preUsuarios').innerHTML = nome + "\n\n" + idade + "\n\n" + endereco + "\n\n" + cidade + "\n\n" + filhos
                 })
         }
     </script>
